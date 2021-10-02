@@ -1,3 +1,3 @@
 # HyperNews Project
 
-JetBrains academy project 
+JetBrains Academy project 
