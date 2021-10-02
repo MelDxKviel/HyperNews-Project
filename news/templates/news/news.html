@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hyper news</title>
+</head>
+    <body>
+        <form id="search-form" method="get" action="{% url 'news_page' %}">
+            <input type="search" class="search-box" name="q">
+            <input type="submit" value="Search">
+        </form>
+        <h2>Hyper news</h2>
+        {% for day, news_list in news_per_day.items %}
+            <h4>{{ day }}</h4>
+            <ul>
+            {% for news in news_list %}
+                <li><a href="/news/{{ news.link }}/">{{ news.title }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endfor %}
+
+        <a href="/news/create/"></a>
+    </body>
+</html>
